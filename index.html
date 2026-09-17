@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="A special date questionnaire for Celina.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+    <title>One special date for Celina</title>
+</head>
+<body>
+    <main class="page-shell">
+        <section class="intro" aria-labelledby="page-title">
+            <p class="eyebrow">A lil invitation from me</p>
+            <h1 id="page-title">Wassup Celina :)<span aria-hidden="true">♡</span></h1>
+            
+        </section>
+
+        <form id="date-form" class="date-form">
+            <fieldset>
+                <legend>Which days work for you?</legend>
+                <p class="field-hint">Select every day that could work.</p>
+                <div class="choice-grid">
+                    <label class="choice"><input type="checkbox" name="days" value="Monday"><span>Monday</span></label>
+                    <label class="choice"><input type="checkbox" name="days" value="Tuesday"><span>Tuesday</span></label>
+                    <label class="choice"><input type="checkbox" name="days" value="Wednesday"><span>Wednesday</span><small>I Work Wednesday 4-6 :)</small></label>
+                    <label class="choice"><input type="checkbox" name="days" value="Thursday"><span>Thursday</span></label>
+                    <label class="choice"><input type="checkbox" name="days" value="Friday"><span>Friday</span><small>I Work Friday 4-6 :)</small></label> 
+                    <label class="choice"><input type="checkbox" name="days" value="Saturday"><span>Saturday</span></label>
+                    <label class="choice choice-wide"><input type="checkbox" name="days" value="Sunday"><span>Sunday <small>(I play soccer sunday :P so might be hard)</small></span></label>
+                </div>
+            </fieldset>
+
+            <div class="form-section">
+                <label class="section-label" for="cuisine">What’s your favorite cuisine?</label>
+                <p class="field-hint">Give me a hint for our food tour.</p>
+                <input id="cuisine" name="cuisine" type="text" placeholder="Tacos, sushi, Italian…" autocomplete="off" required>
+            </div>
+
+            <fieldset>
+                <legend>Do you like roses?</legend>
+                <div class="inline-choices">
+                    <label class="choice"><input type="radio" name="roses" value="Yes" required><span>Yes</span></label>
+                    <label class="choice"><input type="radio" name="roses" value="No"><span>No</span></label>
+                </div>
+            </fieldset>
+
+            <fieldset>
+                <legend>What activity sounds best?</legend>
+                <p class="field-hint">Pick the one you’d enjoy most.</p>
+                <div class="activity-list">
+                    <label class="choice"><input type="radio" name="activity" value="Walk near the beach" required><span>Walk near the beach</span></label>
+                    <label class="choice"><input type="radio" name="activity" value="Movie after food"><span>Movie after food</span></label>
+                    <label class="choice"><input type="radio" name="activity" value="Walk around Downtown"><span>Walk around Downtown</span></label>
+                    <label class="choice"><input type="radio" name="activity" value="Arcade games"><span>Arcade games</span></label>
+                </div>
+            </fieldset>
+
+            <button class="submit-button" type="submit">Send my answers <span aria-hidden="true">→</span></button>
+        </form>
+
+        <section id="results" class="results" aria-live="polite" hidden>
+            <div class="results-heading">
+                <p class="eyebrow">Your date blueprint</p>
+                <h2>Perfect. Here’s what I heard.</h2>
+            </div>
+            <dl class="answer-list">
+                <div><dt>Days that work</dt><dd id="result-days"></dd></div>
+                <div><dt>Favorite cuisine</dt><dd id="result-cuisine"></dd></div>
+                <div><dt>Roses</dt><dd id="result-roses"></dd></div>
+                <div><dt>Ideal activity</dt><dd id="result-activity"></dd></div>
+            </dl>
+            <div class="share-note">
+                <p>Screenshot your results and send them to me :)</p>
+                <a href="tel:+14155999320">(415) 599-9320</a>
+            </div>
+            <button id="edit-button" class="edit-button" type="button">Edit my answers</button>
+        </section>
+</body>
+</html>
